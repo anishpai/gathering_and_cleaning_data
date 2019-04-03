@@ -10,10 +10,17 @@ Here are the data for the project:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-R script called run_analysis.R that does the following:
+DATA Description 
+The variables in the data X contain sensor signals measured from a waist mounted smartphone. The variable in the data Y indicates the activity type the the subjects performed during the recording. 
 
-Merges the training and the test sets to create one data set.
-Extracts only the measurements on the mean and standard deviation for each measurement.
-Uses descriptive activity names to name the activities in the data set
-Appropriately labels the data set with descriptive variable names.
-From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+CODE Description 
+The code combines the training data set and training data set and extraction of partial variables to form another dataset with averages of each variable fo reach activity.
+
+The  new data set generated contains variables calculated on the basis of mean and standard deviation. 
+
+1. Merges the training and test data to create one data set, using rbind command.
+2. Extracts the measurement based on the mean and standard deviation fo reach measurement. Using gprep command to get column indices for variable name.
+3. Using descriptive activity names to name the activities in the data set, converting activity labes to characters, adding a new column -factor
+4. Labeling data set with descriptive variable names. Give the selected descriptive names to variable columns
+5. Creating an indepent tidy data set with the average of each variable for each activity and each subject. Using group_by and summarize  command.
+
